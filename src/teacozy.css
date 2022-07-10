@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Helvetica, sans-serif;
+    font-size: 22px;
+    color: seashell;
+    background-color: black;
+    text-align: center;
+    opacity: 0.9;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    margin-top: 69px;
+}
+
+/* ---------------------------------HEADER---------------------------------------- */
+
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    width: 100%;
+    height: 69px;
+    background-color: black;
+    border-bottom: 1px solid seashell;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 10;
+    opacity: 0.95;
+}
+
+header img {
+    position: absolute;
+    left: 10px;
+    height: 50px;
+}
+
+header a {
+    margin: 15px;
+    color: inherit;
+}
+
+#hamburger {
+    display: none;
+}
+
+/* ---------------------------------HERO---------------------------------------- */
+
+#hero {
+    display: flex;
+    align-items: center;
+    width: 1200px;
+    height: 700px;
+    margin: 0 auto;
+    background-image: url(img-mission-background.jpg);
+    background-size: cover;
+}
+
+#herotext {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: black;
+}
+
+#hero h2,
+#hero h4 {
+    margin: 15px;
+}
+
+/* ---------------------------------GALLERY---------------------------------------- */
+
+#gallery {
+    display: flex;
+    margin: 0 auto;
+    width: 1000px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#gallery div {
+    margin: 10px;
+}
+
+#gallery img {
+    width: 300px;
+    height: 200px;
+}
+/* ---------------------------------LOCATIONS---------------------------------------- */
+
+#locations {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    height: 500px;
+    background-image: url(img-locations-background.jpg);
+    background-position-y: -2em;
+    background-repeat: no-repeat;
+    margin: 15px auto;
+}
+
+#locations div {
+    width: 300px;
+    height: 250px;
+    margin: 20px;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+#locations h2 {
+    position: absolute;
+    top: 40px;
+}
+
+/* ---------------------------------CONTACT---------------------------------------- */
+
+#id {
+    height: 200px;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 80px;
+}
+
+footer h5 {
+    position: absolute;
+    left: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+    #hero,
+    #gallery,
+    #locations {
+        width: 100%;
+    }
+}
+
+/*------------------------------------MOBILE AND HAMBURGER---------------------------- */
+
+@media screen and (max-width: 670px) {
+    #locations {
+        flex-direction: column;
+        height: auto;
+        background-size: cover;
+        background-position: 0;
+        background-position-x: -25em;
+    }
+
+    #locations div:first-of-type {
+        margin-top: 7em;
+    }
+
+    header a {
+        display: none;
+    }
+
+    header #hamburger {
+        position: relative;
+        display: block;
+        right: 1em;
+    }
+}
+
+#mobilemenu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 3em;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+}
+
+#mobilemenu li {
+    height: 7em;
+}
+
+#mobilemenu li a {
+    padding-top: 1em;
+    margin: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 2em;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: seashell;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.show {
+    display: block !important;
+}
+
+@media screen and (min-width: 670px) {
+    #mobilemenu {
+        display: none !important;
+    }
+}
