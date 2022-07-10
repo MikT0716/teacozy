@@ -15,18 +15,18 @@
 
     <header>
         <img src="src/img-tea-cozy-logo.png" alt="">
-        <a href="">Mission</a>
-        <a href="">Featured Tea</a>
-        <a href="">Locations</a>
+        <a href="#hero">Mission</a>
+        <a href="#gallery">Featured Tea</a>
+        <a href="#locations">Locations</a>
         <div id="hamburger" onclick="myFunction(this)">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
         <ul id="mobilemenu">
-            <li><a href="#">Mission</a></li>
-            <li><a href="#">Featured Tea</a></li>
-            <li><a href="#">Locations</a></li>
+            <li><a href="#hero">Mission</a></li>
+            <li><a href="#gallery">Featured Tea</a></li>
+            <li><a href="#locations">Locations</a></li>
         </ul>
     </header>
 
@@ -116,9 +116,25 @@
         }
 
         var hamburger = document.querySelector("#hamburger")
+        var mobilemenu = document.querySelector("#mobilemenu")
+
         hamburger.addEventListener("click", function () {
-            document.querySelector("#mobilemenu").classList.toggle("show")
+            mobilemenu.classList.toggle("show")
         })
+
+        document.querySelectorAll("#mobilemenu li a").forEach(item => {
+            item.addEventListener('click', event => {
+                mobilemenu.classList.toggle("show");
+                hamburger.classList.toggle("change");
+            })
+        })
+
+
+
+
+
+
+
     </script>
 </body>
 
