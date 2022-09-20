@@ -18,7 +18,7 @@
         <a href="#hero">Mission</a>
         <a href="#gallery">Featured Tea</a>
         <a href="#locations">Locations</a>
-        <div id="hamburger" onclick="myFunction(this)">
+        <div id="hamburger" onclick="toggleFunction(this)">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
@@ -44,20 +44,23 @@
         <h2>Tea of the Month</h2>
         <h4>What's Sleeping at The Tea Cozy?</h4>
         <div id="gallery">
-            <div><img src="src/img-berryblitz.jpg" alt="">
+            <div><img src="src/img-berryblitz.jpg" alt="" class="gallerytarget">
                 <div>Fall Berry Blitz Tea</div>
             </div>
-            <div><img src="src/img-spiced-rum.jpg" alt="">
+            <div><img src="src/img-spiced-rum.jpg" alt="" class="gallerytarget">
                 <div>Spiced Rum Tea</div>
             </div>
-            <div><img src="src/img-donut.jpg" alt="">
+            <div><img src="src/img-donut.jpg" alt="" class="gallerytarget">
                 <div>Seasonal Donuts</div>
             </div>
-            <div><img src="src/img-myrtle-ave.jpg" alt="">
+            <div><img src="src/img-myrtle-ave.jpg" alt="" class="gallerytarget">
                 <div>Myrtle Ave Tea</div>
             </div>
-            <div><img src="src/img-bedford-bizarre.jpg" alt="">
+            <div><img src="src/img-bedford-bizarre.jpg" alt="" class="gallerytarget">
                 <div>Bedford Bizarre Tea</div>
+            </div>
+            <div id="modal">
+                <img src="" alt="" id="modalimage">
             </div>
         </div>
 
@@ -105,37 +108,7 @@
         </footer>
 
     </main>
-
-
-    <!-------------------------------------SCRIPT---------------------------------------------------->
-
-
-    <script>
-        function myFunction(x) {
-            x.classList.toggle("change");
-        }
-
-        var hamburger = document.querySelector("#hamburger")
-        var mobilemenu = document.querySelector("#mobilemenu")
-
-        hamburger.addEventListener("click", function () {
-            mobilemenu.classList.toggle("show")
-        })
-
-        document.querySelectorAll("#mobilemenu li a").forEach(item => {
-            item.addEventListener('click', event => {
-                mobilemenu.classList.toggle("show");
-                hamburger.classList.toggle("change");
-            })
-        })
-
-
-
-
-
-
-
-    </script>
+    <script src="teacozy.js"></script>
 </body>
 
 </html>
